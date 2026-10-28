@@ -9,44 +9,47 @@
     
 </head>
 <body>
-    <h1>Sign Up</h1>
-    <form>
-        <fieldset>
-            <!-- User Information -->
+    <main>
+        <h1 id="signup-heading">Sign Up</h1>
+        <form aria-labelledby="signup-heading">
+            <fieldset>
+                <legend>Your information</legend>
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username" required /><br />
+            <input type="text" id="username" name="username" placeholder="Enter your username" autocomplete="username" required /><br />
             
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="example@email.com" required /><br />
+            <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email" required /><br />
             
             <label for="password">Password:</label>
-            <input type="password" minlength="6" id="password" name="password" placeholder="Enter your password" required /><br />
+            <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="new-password" required minlength="6" /><br />
             
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" /><br />
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" autocomplete="tel" /><br />
 
             <label for="age">Age:</label>
             <input type="number" id="age" name="age" step="1" min="0" max="120" /><br />
 
             <!-- Radio buttons - Gender -->
-            <p>Gender:</p>
-            <div class="gender-options">
-                <label for="male">
-                    <input type="radio" id="male" name="gender" value="male" />Male</label>
-                <label for="female">
-                    <input type="radio" id="female" name="gender" value="female" />Female</label>
-                <label for="other">
-                    <input type="radio" id="other" name="gender" value="other" />Other</label>
-            </div>
+            <fieldset class="gender-group">
+                <legend>Gender</legend>
+                <div class="gender-options">
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" value="male" />Male</label>
+                    <label for="female">
+                        <input type="radio" id="female" name="gender" value="female" />Female</label>
+                    <label for="other">
+                        <input type="radio" id="other" name="gender" value="other" />Other</label>
+                </div>
+            </fieldset>
             
          
             <!-- Calendar -->
             <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" name="dob" /><br />
+            <input type="date" id="dob" name="dob" autocomplete="bday" /><br />
             
             <!-- Dropdown -->
             <label for="country">Country:</label>
-            <select id="country" name="country">
+            <select id="country" name="country" autocomplete="country-name">
                 <option value="AF">Afghanistan</option>
                 <option value="AL">Albania</option>
                 <option value="DZ">Algeria</option>
@@ -245,17 +248,17 @@
             </select><br />
             
             <!-- Image Upload -->
-            <label for="profile picture">Profile Picture:</label>
-            <input type="file" id="profile picture" name="profile picture" accept="image/*" /><br />
+            <label for="profile-picture">Profile Picture:</label>
+            <input type="file" id="profile-picture" name="profile-picture" accept="image/*" /><br />
 
             <!-- Checkbox -->
-            <label for="terms">I agree to the terms and conditions:
+            <label class="terms-label" for="terms">I agree to the terms and conditions:
                 <input type="checkbox" id="terms" name="terms" required /> </label><br />
             
             <button type="submit">Sign Up</button>
             <p>Already have an account? <a href="login.html">Log in</a></p>
-        </fieldset>
-    </form>
-
+            </fieldset>
+        </form>
+    </main>
 </body>
 </html>
