@@ -150,3 +150,11 @@ select:focus-visible {
         font-size: 28px;
     }
 }
+
+#signup-button
+{
+    padding: 12px 20px;
+    width: fit-content;
+    min-height: 48px;
+
+}
